@@ -1,15 +1,23 @@
 import type { ReactNode, VFC } from "react";
 
+import { Footer, Header } from ".";
+
 type Props = {
   className?: string;
   children: ReactNode;
+  theme?: "home" | "contact";
 };
 
 export const FixedLayout: VFC<Props> = (props) => {
   return (
-    <main>
-      <div className="flex p-32 text-2xl divide-y-0 divide-x-4">FixedLayoutです</div>
-      <div>{props.children}</div>
-    </main>
+    <div className="flex flex-col min-h-screen">
+      <Header />
+      <main className="flex-1">
+        <div className="flex justify-center text-2xl divide-y-0 divide-x-4">
+          <div>{props.children}</div>
+        </div>
+      </main>
+      <Footer />
+    </div>
   );
 };
