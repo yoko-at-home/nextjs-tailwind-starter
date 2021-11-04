@@ -1,9 +1,9 @@
-import '../styles/globals.css'
+import "../styles/globals.css";
 import "tailwindcss/tailwind.css";
 
 import type { AppProps } from "next/app";
 import { GoogleAnalytics } from "src/components/GoogleAnalytics";
-import usePageView from "src/hooks/usePageView";
+import {usePageView} from "src/hooks/usePageView";
 
 const MyApp = (props: AppProps) => {
   usePageView();
@@ -15,4 +15,4 @@ const MyApp = (props: AppProps) => {
   );
 };
 
-export default MyApp
+export default MyApp;

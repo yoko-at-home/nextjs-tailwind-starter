@@ -1,4 +1,4 @@
-import { ReactNode, VFC } from "react";
+import type { ReactNode, VFC } from "react";
 
 type Props = {
   className?: string;
@@ -8,7 +8,7 @@ type Props = {
 export const FixedLayout: VFC<Props> = (props) => {
   return (
     <main>
-      <div className='text-lg p-3'>FixedLayoutです</div>
+      <div className="flex p-32 text-2xl divide-y-0 divide-x-4">FixedLayoutです</div>
       <div>{props.children}</div>
     </main>
   );
