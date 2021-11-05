@@ -42,7 +42,7 @@ export const FormContact = () => {
   return (
     <div>
       <div className="w-full">
-        <div className="container sm:p-6 sm:mt-0 lg:px-20">
+        <div className="container text-base sm:p-6 sm:mt-0 lg:px-20">
           <form onSubmit={handleRegisterUser}>
             <div className="mb-3">
               <label htmlFor="fullname">お名前</label>
