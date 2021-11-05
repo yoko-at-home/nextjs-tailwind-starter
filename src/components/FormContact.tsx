@@ -41,7 +41,7 @@ export const FormContact = () => {
 
   return (
     <div>
-      <div className="w-full">
+      <div className="w-full sm:w-96">
         <div className="container text-base sm:p-6 sm:mt-0 lg:px-20">
           <form onSubmit={handleRegisterUser}>
             <div className="mb-3">
@@ -64,7 +64,7 @@ export const FormContact = () => {
                 name="labo"
                 type="tel"
                 className="block mt-1 w-full rounded-md border-gray-300 focus:border-indigo-500 focus:ring-indigo-500 shadow-sm sm:text-sm"
-                placeholder=""
+                placeholder="電話番号"
                 required
               />
             </div>
@@ -75,7 +75,7 @@ export const FormContact = () => {
                 name="email"
                 type="email"
                 className="block mt-1 w-full rounded-md border-gray-300 focus:border-indigo-500 focus:ring-indigo-500 shadow-sm sm:text-sm"
-                placeholder="送信可能な形式：name@example.com"
+                placeholder="name@example.com"
                 autoComplete="email"
                 required
               />
