@@ -1,14 +1,15 @@
 import type { VFC } from "react";
 
-export const Facebook: VFC<{ className?: string }> = (props) => {
-  // const width = props.width | 24;
-  // const height = props.height | 24;
+export const Facebook: VFC<{ className?: string; width: number; height: number }> = (props) => {
+  const width = props.width | 24;
+  const height = props.height | 24;
+
   return (
     <svg
       className={props.className}
       xmlns="http://www.w3.org/2000/svg"
-      // width={width}
-      // height={height}
+      width={width}
+      height={height}
       viewBox="0 0 24 24"
     >
       <path fill="none" d="M0 0h24v24H0z"></path>

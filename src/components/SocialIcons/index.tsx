@@ -28,7 +28,8 @@ const components = {
   twitter: Twitter,
 };
 export const SocialIcon: VFC<Props> = (props) => {
-  if (!props.href) return null;
+  if (!props.href || (props.kind === "mail" && !/^mailto:\w+([.-]?\w+)@\w+([.-]?\w+)(.\w{2,3})+$/.test(props.href)))
+    return null;
 
   const SocialSvg = components[props.kind || "mail"];
   // console.log(props.kind);
@@ -41,9 +42,8 @@ export const SocialIcon: VFC<Props> = (props) => {
       href={props.href}
     >
       <span className="sr-only">{props.kind}</span>
-      <span className={`fill-current text-gray-400 hover:text-pink-700`}>
-        <SocialSvg width={props.width} height={props.height} />
-      </span>
+      <SocialSvg
+        className={`fill-current text-gray-700 dark:text-gray-200 hover:text-blue-500 dark:hover:text-blue-400`} width={0} height={0}/>
     </a>
   );
 };
