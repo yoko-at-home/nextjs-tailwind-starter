@@ -15,5 +15,6 @@ export const siteMetadata = {
   facebook: "https://facebook.com",
   youtube: "https://www.youtube.com/channel/UC_9IZegV5JXw66b0S7fd6-Q",
   linkedin: "https://www.linkedin.com",
+  instagram: "https://www.instagram.com/yoko_and_kotaro/",
   locale: "ja-JP",
 };
