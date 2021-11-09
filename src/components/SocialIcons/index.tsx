@@ -1,27 +1,29 @@
 /* eslint-disable @next/next/no-img-element */
 import type { VFC } from "react";
 
-import Facebook from "./facebook-box-line.svg";
-import Github from "./github-fill.svg";
-import Instagram from "./instagram-line.svg";
-import Mail from "./mail-line.svg";
-import Twitter from "./twitter-fill.svg";
-import Youtube from "./youtube-line.svg";
+import { Facebook } from "./facebook";
+import { GitHub } from "./github";
+import { Instagram } from "./instagram";
+import { Mail } from "./mail";
+import { Twitter } from "./twitter";
+import { YouTube } from "./youtube";
 
 // Icons taken from:https://remixicon.com
+// convert using https://svg2jsx.com
 
 type Props = {
   className?: string;
   kind?: "mail" | "facebook" | "twitter" | "instagram" | "github" | "youtube";
   href?: string;
-  size?: number;
+  width?: number;
+  height?: number;
 };
 
 const components = {
   mail: Mail,
-  github: Github,
+  github: GitHub,
   facebook: Facebook,
-  youtube: Youtube,
+  youtube: YouTube,
   instagram: Instagram,
   twitter: Twitter,
 };
@@ -39,7 +41,9 @@ export const SocialIcon: VFC<Props> = (props) => {
       href={props.href}
     >
       <span className="sr-only">{props.kind}</span>
-      <SocialSvg className={`fill-current text-gray-700 hover:text-blue-500  h-${props.size} w-${props.size}`} />
+      <span className={`fill-current text-gray-400 hover:text-pink-700`}>
+        <SocialSvg width={props.width} height={props.height} />
+      </span>
     </a>
   );
 };
