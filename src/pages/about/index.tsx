@@ -1,51 +1,40 @@
 import type { NextPage } from "next";
-import Image from "next/image";
-import { CustomLink } from "src/components/CustomLink";
-import { NavBarDesktop, NavBarMobile } from "src/components/navigation";
-// import { NavBarMobile } from "src/components/navigation";
+import { PageTitle } from "src/components/PageTitle";
+import { PageSEO } from "src/components/SEO";
 import { siteMetadata } from "src/data/siteMetadata";
-import { Footer } from "src/layout";
+import { FixedLayout } from "src/layout";
+
+const data = {
+  title: "タイトルです",
+  address: "住所です",
+  description1: "説明1",
+  description2: "説明2",
+};
 
 const About: NextPage = () => {
   return (
-    <>
-      <div className="relative">
-        <div className="relative">
-          <Image
-            width="100%"
-            height="100%"
-            layout="responsive"
-            className="object-cover object-center pointer-events-none"
-            src="https://source.unsplash.com/random/1600x500/?flower"
-            alt={"About"}
-          />
-          <div className="absolute -top-6 left-32">
-            <h1 className="mx-auto mt-16 text-center">
-              <CustomLink href="/" aria-label="Gen-Scent">
-                <div className="flex justify-between items-center mb-8">
-                  <div
-                    style={{
-                      border: "double 5px #636363",
-                      textShadow: "3px 3px 5px#ffffff",
-                      color: "#71745b",
-                    }}
-                    className="p-3 my-6 text-2xl font-semibold whitespace-nowrap bg-clip-text bg-opacity-40 backdrop-filter backdrop-blur-lg sm:text-5xl"
-                  >
-                    {siteMetadata.headerTitle}
-                  </div>
-                </div>
-              </CustomLink>
-            </h1>
-          </div>
-          <div className="absolute top-52 sm:left-12 md:left-36 lg:left-72">
-            <NavBarDesktop />
-            <div className="">aaa</div>
+    <div
+      style={{
+        background: "center/cover no-repeat url('https://source.unsplash.com/random/1600x500/?flowerg')",
+      }}
+      className="text-gray-100"
+    >
+      <FixedLayout>
+        <PageSEO title={`About- ${siteMetadata.author}`} description={siteMetadata.description} />
+        <div className="flex flex-col justify-between">
+          <PageTitle>{data.title}</PageTitle>
+          <h2 className="mb-5 text-xl font-semibold md:text-2xl lg:mb-10 lg:text-3xl">{siteMetadata.author}</h2>
+          <p className="text-lg"> {data.address}</p>
+          <div className="container flex pt-6 pb-8 space-y-2 md:space-y-5">
+            <p className="mr-5 text-xl font-semibold whitespace-nowrap divide-y divide-gray-200">事業内容</p>
+            <div className="">
+              <p>{data.description1}</p>
+              <p>{data.description2}</p>
+            </div>
           </div>
         </div>
-        <NavBarMobile />
-      </div>
-      <Footer />
-    </>
+      </FixedLayout>
+    </div>
   );
 };
 
