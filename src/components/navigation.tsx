@@ -42,7 +42,7 @@ export const NavBarMobile: VFC = () => {
   return (
     <>
       {/* <div className="sm:hidden absolute top-6 left-6"> */}
-      <div className="fixed right-5 bottom-10 px-2 pt-1 bg-gray-400 bg-opacity-80 rounded sm:hidden">
+      <div className="fixed right-5 bottom-10 z-50 px-2 pt-1 bg-gray-400 bg-opacity-80 rounded sm:hidden">
         <button
           type="button"
           className="mr-1 ml-1 w-8 h-8 rounded"
