@@ -19,7 +19,7 @@ const About: NextPage = () => {
       }}
       className="text-gray-100"
     >
-      <FixedLayout>
+      <FixedLayout theme="about">
         <PageSEO title={`About- ${siteMetadata.author}`} description={siteMetadata.description} />
         <div className="flex flex-col justify-between">
           <PageTitle>{data.title}</PageTitle>

@@ -50,7 +50,7 @@ export const Header: VFC<Props> = (props) => {
             </CustomLink>
           </h1>
         </div>
-        <div className="hidden px-2 pt-1 pb-3 bg-yellow-100 sm:block">
+        <div className="hidden px-2 pt-2 bg-gray-200 sm:block">
           {props.theme !== "article" && <NavBarDesktop />}
         </div>
         {props.theme !== "article" && <NavBarMobile />}
