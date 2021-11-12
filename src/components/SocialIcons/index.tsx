@@ -36,14 +36,13 @@ export const SocialIcon: VFC<Props> = (props) => {
 
   return (
     <a
-      className="text-sm text-gray-500 hover:text-gray-600 transition"
+      className="text-sm hover:text-blue-500 transition"
       target="_blank"
       rel="noopener noreferrer"
       href={props.href}
     >
       <span className="sr-only">{props.kind}</span>
-      <SocialSvg
-        className={`fill-current text-gray-700 dark:text-gray-200 hover:text-blue-500 dark:hover:text-blue-400`} width={0} height={0}/>
+      <SocialSvg className={`fill-current  h-${props.width} w-${props.height}`} width={0} height={0} />
     </a>
   );
 };

@@ -17,14 +17,14 @@ export const Footer = () => {
             <SocialIcon kind="youtube" href={siteMetadata.youtube} />
             <SocialIcon kind="twitter" href={siteMetadata.twitter} />
           </div>
-          <div className="flex mb-2 space-x-2 text-sm text-gray-500 ">
+          <div className="flex mb-2 space-x-2 text-sm fill-current">
             <div>代表: {siteMetadata.author}</div>
             <div>{` • `}</div>
             <div>{`© ${new Date().getFullYear()}`}</div>
             <div>{` • `}</div>
             <CustomLink href="/">{siteMetadata.title}</CustomLink>
           </div>
-          <div className="my-8 text-sm text-gray-500">
+          <div className="my-8 text-sm fill-current">
             <CustomLink href="https://yoko-2021.vercel.app/">Powered by yoko</CustomLink>
           </div>
         </div>
