@@ -16,7 +16,7 @@ type Props = {
 export const Header: VFC<Props> = (props) => {
   const themeImage = {
     home: "https://source.unsplash.com/1600x500/?nature,water",
-    about: "https://source.unsplash.com/random/1600x500/?flower,pink",
+    about: "https://source.unsplash.com/random/1600x500/?flower",
     contact: "https://source.unsplash.com/random/1600x500/?mountain",
     article: "https://source.unsplash.com/random/1600x500/?mountain",
   };
