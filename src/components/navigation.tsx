@@ -5,12 +5,8 @@ import { CustomLink } from "src/components/CustomLink";
 
 const items = [
   { href: "/", label: "Home" },
-  { href: "/products", label: "Products" },
-  { href: "/application", label: "Application" },
-  { href: "/news", label: "News" },
   { href: "/about", label: "About" },
   { href: "/contact", label: "Contact" },
-  { href: "/members", label: "Memebers" },
 ];
 
 export const NavBarDesktop: VFC = () => {
