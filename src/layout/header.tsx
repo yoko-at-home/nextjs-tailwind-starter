@@ -1,5 +1,5 @@
 /* eslint-disable @next/next/no-img-element */
-// import cc from "classcat";
+import cc from "classcat";
 import Image from "next/image";
 import type { VFC } from "react";
 import { CustomLink } from "src/components/CustomLink";
@@ -9,17 +9,21 @@ import { siteMetadata } from "../data/siteMetadata";
 
 type Props = {
   className?: string;
-  type?: "home" | "about" | "contact" | "article";
+  type?: "home" | "about" ;
   theme?: "home" | "about" | "contact" | "article";
 };
 
 export const Header: VFC<Props> = (props) => {
   const themeImage = {
-    home: "https://source.unsplash.com/1600x500/?nature,water",
-    about: "https://source.unsplash.com/random/1600x500/?flower",
-    contact: "https://source.unsplash.com/random/1600x500/?mountain",
-    article: "https://source.unsplash.com/random/1600x500/?mountain",
+    home: "https://source.unsplash.com/1600x1200/?nature,water",
+    about: "/static/images/header/empty.jpg",
+    contact: "https://source.unsplash.com/random/1600x1200/?cat",
+    article: "https://source.unsplash.com/random/1600x1200/?mountain",
   };
+  const typeOpacity = cc([
+    { "object-cover object-center opacity-30 pointer-events-none": props.type === "about" },
+    { "object-cover object-center pointer-events-none": props.type !== "about" },
+  ]);
 
   return (
     <>
@@ -27,22 +31,22 @@ export const Header: VFC<Props> = (props) => {
         <div className="relative">
           <Image
             width="100%"
-            height="30%"
+            height="35%"
             layout="responsive"
-            className="object-cover object-center pointer-events-none"
+            className={cc([typeOpacity])}
             src={themeImage[props.theme || "home"]}
             alt={"あああ"}
           />
           <h1 className="absolute -top-6 left-0">
-            <CustomLink href="/" aria-label="Cattery Canon">
+            <CustomLink href="/" aria-label="あああ">
               <div className="flex justify-between items-center mb-8">
                 <div
                   style={{
-                    border: "double 5px #636363",
+                    // border: "double 5px #636363",
                     textShadow: "3px 3px 5px#ffffff",
                     color: "#71745b",
                   }}
-                  className="p-3 my-6 text-2xl font-semibold whitespace-nowrap bg-clip-text bg-opacity-40 backdrop-filter backdrop-blur-lg sm:text-5xl"
+                  className="p-2 my-6 text-2xl font-semibold whitespace-nowrap bg-clip-text bg-opacity-40 rounded backdrop-filter backdrop-blur-lg sm:text-5xl"
                 >
                   {siteMetadata.headerTitle}
                 </div>
@@ -50,7 +54,7 @@ export const Header: VFC<Props> = (props) => {
             </CustomLink>
           </h1>
         </div>
-        <div className="hidden px-2 pt-2 bg-gray-200 sm:block">
+        <div className="hidden px-2 pt-2 mb-10 bg-yellow-50/80 sm:block">
           {props.theme !== "article" && <NavBarDesktop />}
         </div>
         {props.theme !== "article" && <NavBarMobile />}

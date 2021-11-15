@@ -5,6 +5,7 @@ import { CustomLink } from "src/components/CustomLink";
 
 const items = [
   { href: "/", label: "Home" },
+  { href: "/product", label: "Product" },
   { href: "/about", label: "About" },
   { href: "/contact", label: "Contact" },
 ];
