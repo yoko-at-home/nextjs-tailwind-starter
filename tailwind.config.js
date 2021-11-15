@@ -5,8 +5,8 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        // sans: ["Kaushan Script", "Kaisei opti"],
-        fantasy: "fantasy",
+        sans: ["Kaushan Script", "Kaisei opti"],
+        fantasy: ["fantasy", "Kaisei Opti"],
       },
     },
   },
