@@ -11,7 +11,7 @@ const items = [
 
 export const NavBarDesktop: VFC = () => {
   return (
-    <nav className="hidden justify-center mt-40 text-center sm:flex">
+    <nav className="hidden justify-center text-center sm:flex">
       {items.map(({ href, label }) => {
         return (
           <Link key={href} href={href}>
