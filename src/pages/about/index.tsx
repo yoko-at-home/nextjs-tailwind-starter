@@ -15,7 +15,7 @@ const About: NextPage = () => {
   return (
     <div
       style={{
-        background: "center/cover no-repeat url('https://source.unsplash.com/random/1600x500/?flowerg')",
+        background: "center/cover no-repeat url('https://source.unsplash.com/random/1600x500/?flower)",
       }}
       className="text-gray-100"
     >
