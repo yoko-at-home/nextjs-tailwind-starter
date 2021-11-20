@@ -21,7 +21,7 @@ export const Header: VFC<Props> = (props) => {
     article: "https://source.unsplash.com/random/1600x1200/?mountain",
   };
   const typeOpacity = cc([
-    { "object-cover object-center opacity-30 pointer-events-none": props.type === "about" },
+    { "object-cover object-center opacity-20 pointer-events-none": props.type === "about" },
     { "object-cover object-center pointer-events-none": props.type !== "about" },
   ]);
 
@@ -31,7 +31,7 @@ export const Header: VFC<Props> = (props) => {
         <div className="relative">
           <Image
             width="100%"
-            height="35%"
+            height="30%"
             layout="responsive"
             className={cc([typeOpacity])}
             src={themeImage[props.theme || "home"]}
@@ -54,9 +54,7 @@ export const Header: VFC<Props> = (props) => {
             </CustomLink>
           </h1>
         </div>
-        <div className="hidden px-2 pt-2 mb-10 bg-yellow-50/80 sm:block">
-          {props.theme !== "article" && <NavBarDesktop />}
-        </div>
+        <div className="hidden px-2 pt-2 bg-gray-200/80 sm:block">{props.theme !== "article" && <NavBarDesktop />}</div>
         {props.theme !== "article" && <NavBarMobile />}
       </header>
     </>
