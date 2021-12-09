@@ -29,14 +29,19 @@ export const Header: VFC<Props> = (props) => {
     <>
       <header className="relative">
         <div className="relative">
-          <Image
-            width="100%"
-            height="30%"
-            layout="responsive"
-            className={cc([typeOpacity])}
-            src={themeImage[props.theme || "home"]}
-            alt={"あああ"}
-          />
+          <div className="hidden md:block">
+            ya
+          </div>
+          <div className="md:hidden">
+            <Image
+              width="100%"
+              height="35%"
+              layout="responsive"
+              className={cc([typeOpacity])}
+              src={themeImage[props.theme || "home"]}
+              alt={"あああ"}
+            />
+          </div>
           <h1 className="absolute -top-6 left-0">
             <CustomLink href="/" aria-label="あああ">
               <div className="flex justify-between items-center mb-8">

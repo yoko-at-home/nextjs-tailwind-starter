@@ -1,14 +1,20 @@
 import type { VFC } from "react";
 
-export const GitHub: VFC<{ className?: string; width: number; height: number }> = (props) => {
-    const width = props.width | 24;
-    const height = props.height | 24;
+type Props = {
+  className?: string;
+  width: number;
+  height: number;
+};
+
+export const GitHub: VFC<Props> = (props) => {
+  // const width = props.width | 24;
+  // const height = props.height | 24;
   return (
     <svg
       className={props.className}
       xmlns="http://www.w3.org/2000/svg"
-      width={width}
-      height={height}
+      width={props.width | 24}
+      height={props.height | 24}
       viewBox="0 0 24 24"
     >
       <path fill="none" d="M0 0h24v24H0z"></path>

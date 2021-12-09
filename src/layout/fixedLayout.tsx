@@ -20,7 +20,7 @@ export const FixedLayout: VFC<Props> = (props) => {
           <Header theme={props.theme || "about"} type={props.type || "about"} />
         )}
       </div>
-      <main className="z-40 flex-1">
+      <main className="z-40 flex-1 pt-10 bg-gray-200/10">
         <div className="px-2 text-2xl divide-y-0 divide-x-4 sm:px-3 md:px-14 lg:px-24">
           <div className="mb-16">{props.children}</div>
         </div>
