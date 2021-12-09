@@ -1,9 +1,8 @@
-import * as React from "react";
-import "./styles.css";
 import { useKeenSlider } from "keen-slider/react";
 import "keen-slider/keen-slider.min.css";
+import Image from "next/image";
 
-export default function Carouselya() {
+export default function Carousel() {
   const [sliderRef] = useKeenSlider<HTMLDivElement>(
     {
       loop: true,
@@ -43,13 +42,64 @@ export default function Carouselya() {
   return (
     <>
       <div ref={sliderRef} className="keen-slider">
-        <div className="keen-slider__slide number-slide1">1</div>
-        <div className="keen-slider__slide number-slide2">2</div>
-        <div className="keen-slider__slide number-slide3">3</div>
-        <div className="keen-slider__slide number-slide4">4</div>
-        <div className="keen-slider__slide number-slide5">5</div>
-        <div className="keen-slider__slide number-slide6">6</div>
+        <div className="keen-slider__slide number-slide1">
+          <Image layout="fill" src="/static/images/0_top/baby-mainecoon.webp" />
+        </div>
+        <div className="keen-slider__slide number-slide2">
+          <Image layout="fill" src="/static/images/0_top/baby-mainecoon.webp" />
+        </div>
+        <div className="keen-slider__slide number-slide3">
+          <Image layout="fill" src="/static/images/0_top/baby-mainecoon.webp" />
+        </div>
+        <div className="keen-slider__slide number-slide4">
+          <Image layout="fill" src="/static/images/0_top/baby-mainecoon.webp" />
+        </div>
+        <div className="keen-slider__slide number-slide5">
+          <Image layout="fill" src="/static/images/0_top/baby-mainecoon.webp" />
+        </div>
+        <div className="keen-slider__slide number-slide6">
+          <Image layout="fill" src="/static/images/0_top/baby-mainecoon.webp" />
+        </div>
       </div>
+      <style jsx>{`
+        [class^="number-slide"],
+        [class*=" number-slide"] {
+          // background: grey;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          font-size: 50px;
+          color: #fff;
+          font-weight: 500;
+          height: 100vh;
+          max-height: 100vh;
+        }
+
+        .number-slide1 {
+          background: rgb(64, 175, 255);
+          background: linear-gradient(128deg, rgba(64, 175, 255, 1) 0%, rgba(63, 97, 255, 1) 100%);
+        }
+
+        .number-slide2 {
+          background: 'top / cover no-repeat url("/static/images/0_top/baby-mainecoon.webp")';
+        }
+
+        .number-slide3 {
+          background: 'top / cover no-repeat url("/static/images/0_top/baby-mainecoon.webp")';
+        }
+
+        .number-slide4 {
+          background: 'top / cover no-repeat url("/static/images/0_top/baby-mainecoon.webp")';
+        }
+
+        .number-slide5 {
+          background: 'top / cover no-repeat url("/static/images/0_top/baby-mainecoon.webp")';
+        }
+
+        .number-slide6 {
+          background: 'top / cover no-repeat url("/static/images/0_top/baby-mainecoon.webp")';
+        }
+      `}</style>
     </>
   );
 }
