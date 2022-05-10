@@ -43,13 +43,8 @@ export const NavBarMobile: VFC = () => {
   return (
     <>
       {/* <div className="sm:hidden absolute top-6 left-6"> */}
-      <div className="fixed right-5 bottom-10 z-50 px-2 pt-1 bg-gray-400 bg-opacity-80 rounded sm:hidden">
-        <button
-          type="button"
-          className="mr-1 ml-1 w-8 h-8 rounded"
-          aria-label="Toggle Menu"
-          onClick={handleOnToggleNav}
-        >
+      <div className="fixed right-5 bottom-10 z-50 px-2 pt-1 bg-gray-400/80 rounded sm:hidden">
+        <button type="button" className="mx-1 w-8 h-8 rounded" aria-label="Toggle Menu" onClick={handleOnToggleNav}>
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="text-gray-200 ">
             {isNavShow ? (
               <path
@@ -74,7 +69,7 @@ export const NavBarMobile: VFC = () => {
           <button
             type="button"
             aria-label="toggle modal"
-            className="fixed -top-7 w-full h-4/5 cursor-auto focus:outline-none"
+            className="fixed -top-7 w-full h-4/5 focus:outline-none cursor-auto"
             onClick={handleOnToggleNav}
           ></button>
           <nav className="mt-40 text-center">
